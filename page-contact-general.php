@@ -17,38 +17,14 @@ get_header();
   <section class="contact-form-section">
     <div class="container">
 
-      <form class="contact-form js-rcp-contact-form" name="general">
-        <input type="hidden" name="contact_type" value="general">
-
-        <!-- ▼▼▼ ハニーポット（スパム対策） ▼▼▼ -->
-        <div class="honeypot-field" style="position:absolute; left:-9999px;">
-          <label>このフィールドは入力しないでください</label>
-          <input type="text" name="website" tabindex="-1" autocomplete="off">
-        </div>
-        <!-- ▲▲▲ ハニーポットここまで ▲▲▲ -->
-
-        <div class="form-group">
-          <label>お名前</label>
-          <input type="text" name="name" required>
-        </div>
-
-        <div class="form-group">
-          <label>メールアドレス</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label>会社名（任意）</label>
-          <input type="text" name="company">
-        </div>
-
-        <div class="form-group">
-          <label>お問い合わせ内容</label>
-          <textarea name="message" rows="6" required></textarea>
-        </div>
-
-        <button class="button" type="submit">送信する</button>
-      </form>
+      <!-- ▼ HubSpotフォーム埋め込み ▼ -->
+      <script src="https://js-na2.hsforms.net/forms/embed/244556311.js" defer></script>
+      <div class="hs-form-frame"
+        data-region="na2"
+        data-form-id="d9167c75-37be-4434-9f06-e99abd5d1e03"
+        data-portal-id="244556311">
+      </div>
+      <!-- ▲ HubSpotフォームここまで ▲ -->
 
     </div>
   </section>
