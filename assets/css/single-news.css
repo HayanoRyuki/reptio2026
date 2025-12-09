@@ -1,0 +1,84 @@
+/* =====================================================
+   SINGLE NEWS
+===================================================== */
+
+/* 上の余白が大きすぎてヘッダーが下がっていたため調整 */
+.single-news {
+  padding: 40px 0 80px; /* 上40 / 下80 */
+}
+
+/* ----- タイトル ----- */
+.news-title {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+/* ----- 日付 ----- */
+.news-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ----- サムネイル ----- */
+.news-thumb img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* ----- 本文 ----- */
+.news-content {
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 60px;
+}
+
+.news-content h2,
+.news-content h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+/* ----- ナビゲーション ----- */
+.news-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.news-navigation a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.news-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* ----- 戻るボタン ----- */
+.news-back {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  padding: 10px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+/* ----- SP最適化 ----- */
+@media (max-width: 768px) {
+  .single-news {
+    padding: 20px 0 60px; /* SPでも上が下がらないように最適化 */
+  }
+}

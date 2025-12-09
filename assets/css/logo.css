@@ -1,0 +1,10 @@
+.archive-logo .logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-item img {
+  max-width: 140px;
+  height: auto;
+}

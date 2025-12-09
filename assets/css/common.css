@@ -1,0 +1,595 @@
+/* =====================================================
+   Reptio2026 : COMMON STYLE
+   すべてのページで読み込む共通CSS
+===================================================== */
+
+/* ------------------------------
+   ROOT COLOR VARIABLES
+------------------------------ */
+:root {
+  --color-primary: #332c54;
+  --color-secondary: #4e878c;
+  --color-accent: #65b891;
+  --color-bg: #f4f4ed;
+
+  --color-text: #222;
+  --color-border: #ddd;
+
+  --container-width: 1080px;
+}
+
+/* ------------------------------
+   RESET（最小限のリセット）
+------------------------------ */
+html, body, div, span, p, a, img,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li, figure {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol { list-style: none; }
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------
+   BASE BODY
+------------------------------ */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+
+  /* フェードイン */
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+body.is-loaded {
+  opacity: 1;
+}
+
+/* ------------------------------
+   HEADING BASE STYLE（共通見出し）
+------------------------------ */
+
+/* 見出し共通 */
+h1, h2, h3, h4, h5 {
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 1.2em;
+}
+
+/* PC（デスクトップ） */
+h1 { font-size: 2.2rem; font-weight: 700; }   /* ページタイトル */
+h2 { font-size: 1.8rem; font-weight: 600; }   /* セクション見出し */
+h3 { font-size: 1.4rem; font-weight: 600; }   /* 小見出し */
+h4 { font-size: 1.2rem; font-weight: 500; }
+h5 { font-size: 1.05rem; font-weight: 500; }
+
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; font-weight: 700; }
+  h2 { font-size: 1.4rem; font-weight: 600; }
+  h3 { font-size: 1.2rem; font-weight: 600; }
+  h4 { font-size: 1.05rem; font-weight: 500; }
+  h5 { font-size: 0.95rem; font-weight: 500; }
+}
+
+/* ------------------------------
+   CONTAINER
+------------------------------ */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header-logo-img {
+    height: 24px;
+  }
+}
+
+/* ナビ */
+.header-nav ul {
+  display: flex;
+  gap: 28px;
+}
+.header-nav a {
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: opacity 0.3s;
+}
+.header-nav a:hover {
+  opacity: 0.6;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 14px 16px;
+  }
+  .header-nav ul {
+    gap: 20px;
+  }
+  .header-logo a {
+    font-size: 1.2rem;
+  }
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 30px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* フッターナビ */
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  margin-bottom: 24px;
+}
+
+.footer-nav a {
+  color: #fff;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+.footer-nav a:hover {
+  opacity: 1;
+}
+
+/* コピーライト */
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* =====================================================
+   HERO：PCは全面画像＋テキストオーバーレイ
+===================================================== */
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 画像 */
+.hero-image {
+  width: 100%;
+  height: 680px;
+  position: relative;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* テキスト（PC配置） */
+.hero-text {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  max-width: 520px;
+  z-index: 5;
+}
+
+/* ---- PC テキスト ---- */
+.hero-tagline {
+  display: inline-block;
+  background: #000;
+  color: #fdd35c;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.02em;
+}
+
+.hero-main {
+  display: inline-block;
+  background: #fff;
+  padding: 14px 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #dd8c1c;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 26px;
+  border-radius: 50px;
+  transition: opacity 0.3s;
+}
+.hero-btn:hover {
+  opacity: 0.7;
+}
+
+
+/* =====================================================
+   SP（768px以下）：画像の下半分にテキストを重ねる
+===================================================== */
+@media (max-width: 768px) {
+
+  .hero-image {
+    height: 70vh;
+    min-height: 480px;
+  }
+
+  /* ★ テキスト位置をSP専用に */
+  .hero-text {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    transform: none !important;
+    max-width: none;
+  }
+
+  /* ★ SP用フォントサイズ（PCより小さく） */
+  .hero-tagline {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-main {
+    padding: 10px 14px;
+    font-size: 1.1rem;       /* ← SPに確実に反映 */
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;       /* ← SP用のサブテキスト小さめ */
+    margin-bottom: 16px;
+  }
+
+  .hero-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-radius: 40px;
+  }
+}
+
+
+
+/* =====================================================
+   LOGO SLIDER（2列 × 無限スクロール）
+===================================================== */
+
+.logo-slider {
+  background: #fff;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* 全幅にする：max-width をなくす */
+.logo-slider-inner {
+  width: 100%;
+  padding: 0 0;        /* 左右余白も不要なら 0 に */
+  margin: 0;
+}
+
+/* -----------------------------------------------------
+   2列まとめるラッパー
+----------------------------------------------------- */
+.logo-track-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  width: 100%;    /* 安定のため追加 */
+}
+
+/* -----------------------------------------------------
+   1列分のスライド領域
+----------------------------------------------------- */
+.logo-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* -----------------------------------------------------
+   実際に動く行（ロゴを横に並べた帯）
+----------------------------------------------------- */
+.logo-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logo-item {
+  width: 140px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.logo-item:hover img {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------
+   アニメーション
+----------------------------------------------------- */
+
+@keyframes slide-left-to-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slide-right-to-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 上段：左 → 右 */
+.left-to-right {
+  animation: slide-left-to-right 25s linear infinite;
+}
+
+/* 下段：右 → 左 */
+.right-to-left {
+  animation: slide-right-to-left 30s linear infinite;
+}
+
+/* -----------------------------------------------------
+   SP：1列でも崩れず自然に表示
+----------------------------------------------------- */
+@media (max-width: 768px) {
+
+  .logo-item {
+    width: 110px;
+    height: 50px;
+  }
+
+  .logo-row {
+    gap: 28px;
+  }
+
+  /* スマホは速度調整してゆっくりにする */
+  .left-to-right {
+    animation-duration: 28s;
+  }
+  .right-to-left {
+    animation-duration: 32s;
+  }
+}
+
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.about-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+/* テキスト */
+.about-text {
+  flex: 1;
+}
+.about-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 12px;
+}
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.about-desc {
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+.about-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: opacity 0.3s;
+}
+.about-btn:hover {
+  opacity: 0.7;
+}
+
+/* 画像 */
+.about-image {
+  flex: 1;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+  .about-inner {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+  .about-title {
+    font-size: 1.6rem;
+  }
+  .about-desc {
+    font-size: 0.95rem;
+  }
+  .about-btn {
+    margin-top: 10px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* =====================================================
+   NEWS SECTION
+===================================================== */
+
+.news {
+  background: #fafafa;
+  padding: 80px 0;
+}
+
+.news-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.news-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+/* LIST */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.news-date {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  min-width: 90px;
+}
+
+.news-link {
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+.news-link:hover {
+  opacity: 0.6;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .news-date {
+    min-width: auto;
+  }
+}

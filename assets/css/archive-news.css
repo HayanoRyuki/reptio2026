@@ -1,0 +1,48 @@
+/* =====================================================
+   NEWS ARCHIVE PAGE
+===================================================== */
+
+.archive-news {
+  padding: 80px 0;
+}
+
+.archive-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* リスト */
+.news-archive-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.news-archive-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-archive-link {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 18px 0;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.news-archive-link:hover {
+  opacity: 0.7;
+}
+
+.news-archive-date {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 120px;
+}
+
+.news-archive-title {
+  font-size: 1rem;
+  color: var(--color-text);
+}

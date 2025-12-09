@@ -1,0 +1,165 @@
+/* =====================================================
+   SINGLE NEWS（お知らせ詳細ページ）
+===================================================== */
+
+.single-news {
+  background: #fff;
+  padding: 80px 0;
+}
+
+/* コンテンツ内の最大幅 */
+.single-news .container {
+  max-width: 760px;
+}
+
+/* タイトル（h1） */
+.single-news .news-title {
+  font-size: 2.2rem;      /* PC：ベースh1と同じ */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+/* 日付 */
+.single-news .news-date {
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  margin-bottom: 30px;
+}
+
+/* アイキャッチ */
+.single-news .news-thumb {
+  margin-bottom: 32px;
+}
+.single-news .news-thumb img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 本文 */
+.single-news .news-content {
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.single-news .news-content p {
+  margin-bottom: 1.6em;
+}
+
+.single-news .news-content img {
+  margin: 28px 0;
+  border-radius: 8px;
+}
+
+/* 前後ナビ */
+.single-news .news-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 40px;
+}
+
+.single-news .news-navigation a {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.single-news .news-navigation a:hover {
+  opacity: 0.7;
+}
+
+/* 一覧へ戻るボタン */
+.single-news .news-back {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.single-news .back-button {
+  display: inline-block;
+  padding: 12px 26px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: opacity 0.3s;
+}
+
+.single-news .back-button:hover {
+  opacity: 0.75;
+}
+
+/* =====================================================
+   SP（スマホ）
+===================================================== */
+@media (max-width: 768px) {
+
+  .single-news {
+    padding: 50px 0;
+  }
+
+  .single-news .container {
+    padding: 0 16px;
+  }
+
+  .single-news .news-title {
+    font-size: 1.6rem;    /* SPのh1調整に合わせる */
+    margin-bottom: 8px;
+  }
+
+  .single-news .news-date {
+    margin-bottom: 24px;
+  }
+
+  .single-news .news-content {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .single-news .news-navigation {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .single-news .back-button {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .single-news .news-title {
+    font-size: 1.3rem;   /* ← 21px程度に縮小 */
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+}
+
+/* =====================================================
+   HEADER：SP 調整（ナビが内側に入る問題の修正）
+===================================================== */
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 0; /* 余白リセット */
+  }
+
+  .header-inner {
+    padding: 10px 16px;   /* 上下を圧縮：14px → 10px */
+    align-items: center;  /* 中央揃え強制 */
+  }
+
+  /* ロゴが下がる場合は高さを確定させる */
+  .header-logo-img {
+    height: 26px;   /* SPロゴの最適値 */
+    display: block;
+  }
+
+  /* ナビが上に上がらないよう行揃えを調整 */
+  .header-nav ul {
+    align-items: center;
+  }
+}

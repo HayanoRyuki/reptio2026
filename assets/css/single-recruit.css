@@ -1,0 +1,108 @@
+/* =====================================================
+   RECRUIT SINGLE PAGE（採用詳細）
+===================================================== */
+
+.single-recruit {
+  padding: 80px 0;
+}
+
+/* タイトル */
+.recruit-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+/* カテゴリタグ */
+.recruit-meta {
+  margin-bottom: 24px;
+}
+
+.recruit-tag {
+  display: inline-block;
+  background: var(--color-secondary);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* サムネイル */
+.recruit-thumb img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* 本文 */
+.recruit-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+.recruit-content h2 {
+  font-size: 1.4rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--color-primary);
+}
+
+.recruit-content ul {
+  margin-bottom: 24px;
+  padding-left: 1.2rem;
+}
+
+/* CTAボタン */
+.recruit-cta {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.apply-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity .3s;
+}
+.apply-button:hover {
+  opacity: .8;
+}
+
+/* 前後ナビ */
+.recruit-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.recruit-navigation a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.recruit-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* 戻る */
+.recruit-back {
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.back-button:hover {
+  opacity: .8;
+}

@@ -1,0 +1,87 @@
+/* =====================================================
+   CONTACT COMPANY（企業採用お問い合わせ） 
+   ※ CONTACT GENERAL と完全に同じデザイン
+===================================================== */
+
+.contact-form-page {
+  padding: 40px 0 80px;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.contact-form-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: var(--color-text);
+}
+
+/* フォーム */
+.contact-form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+  /* ページ全体の横スクロール防止 */
+  .contact-form-page {
+    padding: 20px 0 60px;
+    overflow-x: hidden;
+  }
+
+  /* コンテナの左右 padding が広すぎて溢れている可能性対策 */
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;   /* ← スマホ用余白を強制的に入れる */
+    box-sizing: border-box;
+  }
+
+  /* input/textarea も念のため overflow を防止 */
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 100%;
+  }
+}

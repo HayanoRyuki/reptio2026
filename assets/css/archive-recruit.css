@@ -1,0 +1,68 @@
+/* =====================================================
+   RECRUIT ARCHIVE PAGE
+===================================================== */
+
+.archive-recruit {
+  padding: 80px 0;
+}
+
+.archive-recruit .archive-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+}
+
+/* ===== LIST ===== */
+.recruit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recruit-item {
+  background: #fff;
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  transition: box-shadow .2s;
+}
+
+.recruit-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.recruit-link {
+  display: block;
+}
+
+.recruit-date {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.recruit-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.recruit-excerpt {
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .recruit-item {
+    padding: 20px;
+  }
+
+  .recruit-title {
+    font-size: 1.2rem;
+  }
+}

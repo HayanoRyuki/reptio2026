@@ -1,0 +1,173 @@
+/* =====================================================
+   ABOUT PAGE 全体
+===================================================== */
+
+.about-page {
+  background: #fff;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.about-hero {
+  background: var(--color-primary);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-hero-title {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+
+/* ================================
+   共通セクション
+================================ */
+
+.about-section {
+  padding: 80px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.about-section:last-of-type {
+  border-bottom: none;
+}
+
+.about-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: 28px 0 12px;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   会社概要テーブル
+================================ */
+
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.about-table th,
+.about-table td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 1rem;
+}
+
+.about-table th {
+  width: 180px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.about-table tr:last-child td,
+.about-table tr:last-child th {
+  border-bottom: none;
+}
+
+
+/* ================================
+   導入実績（クライアント）
+================================ */
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-grid .logo-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-grid img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+
+/* ================================
+   VALUES（価値観）
+================================ */
+
+.about-values {
+  margin-top: 16px;
+  padding-left: 18px;
+}
+
+.about-values li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+  list-style: disc;
+}
+
+
+/* ================================
+   レスポンシブ
+================================ */
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    padding: 60px 0;
+  }
+
+  .about-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-table th {
+    width: 140px;
+  }
+
+  .about-clients {
+    gap: 10px 14px;
+  }
+
+  .about-clients li {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .about-values li {
+    font-size: 0.95rem;
+  }
+}

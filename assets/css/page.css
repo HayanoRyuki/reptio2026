@@ -1,0 +1,139 @@
+/* ======================================
+   固定ページ：共通デザイン
+ ====================================== */
+
+/* --- ページヘッダー（任意の固定ページで使用） --- */
+.page-header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.page-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.page-header .subtitle {
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+/* --- 固定ページのセクション共通 --- */
+.page-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.page-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.page-section p {
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   PAGE（固定ページ：page.php 標準）
+===================================================== */
+
+.page-default {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.page-section .container {
+  max-width: var(--container-width);
+}
+
+/* --- 固定ページタイトル（h1） --- */
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+/* --- 本文の標準スタイル --- */
+.page-content {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.page-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 48px 0 20px;
+  color: var(--color-primary);
+}
+
+.page-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.page-content p {
+  margin-bottom: 24px;
+}
+
+.page-content ul,
+.page-content ol {
+  margin: 0 0 24px 20px;
+}
+
+.page-content li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+/* --- 本文画像 --- */
+.page-content img {
+  margin: 32px 0;
+  border-radius: 4px;
+}
+
+/* =====================================================
+   SP（スマホ）最適化
+===================================================== */
+@media (max-width: 768px) {
+
+  .page-header {
+    padding: 60px 20px 30px;
+  }
+
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .page-default {
+    padding: 50px 0;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .page-content {
+    font-size: 0.95rem;
+  }
+
+  .page-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .page-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .page-content img {
+    margin: 24px 0;
+  }
+}
