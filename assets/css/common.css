@@ -616,3 +616,60 @@ h5 { font-size: 1.05rem; font-weight: 500; }
     min-width: auto;
   }
 }
+
+/* ==========================
+   Culture Cards
+========================== */
+
+.culture-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.culture-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 36px 32px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+.culture-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.culture-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.culture-values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.culture-values li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.culture-values strong {
+  color: var(--color-primary);
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .culture-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

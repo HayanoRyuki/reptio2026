@@ -101,32 +101,57 @@ get_header();
     </div>
   </section>
 
-  <!-- Culture -->
-  <section class="about-section">
-    <div class="container">
-      <h2 class="about-section-title">Opinioのカルチャー</h2>
+ <!-- Culture -->
+<section class="about-section">
+  <div class="container">
 
-      <h3 class="about-subtitle">VISION</h3>
-      <p class="about-text">
-        すべての選択肢に、<br>
-        納得のいく<br>
-        ストーリーを。
-      </p>
+    <h2 class="about-section-title">Opinioのカルチャー</h2>
 
-      <h3 class="about-subtitle">MISSION</h3>
-      <p class="about-text">
-        AI時代の<br>
-        キャリアインフラになる。
-      </p>
+    <div class="culture-cards">
 
-      <h3 class="about-subtitle">VALUE</h3>
-      <ul class="about-values">
-        <li><strong>The Dream Team</strong> ― 最高のチームを作る</li>
-        <li><strong>Truth First</strong> ― 真実を最優先に</li>
-        <li><strong>Think Big</strong> ― 大きく考える</li>
-      </ul>
+      <!-- VISION -->
+      <div class="culture-card">
+        <h3 class="culture-title">VISION</h3>
+        <p class="culture-text">
+          すべての選択肢に、<br>
+          納得のいく<br>
+          ストーリーを。
+        </p>
+      </div>
+
+      <!-- MISSION -->
+      <div class="culture-card">
+        <h3 class="culture-title">MISSION</h3>
+        <p class="culture-text">
+          AI時代の<br>
+          キャリアインフラになる。
+        </p>
+      </div>
+
+      <!-- VALUE -->
+      <div class="culture-card">
+        <h3 class="culture-title">VALUE</h3>
+        <ul class="culture-values">
+          <li>
+            <strong>The Dream Team</strong><br>
+            最高のチームを作る
+          </li>
+          <li>
+            <strong>Truth First</strong><br>
+            真実を最優先に
+          </li>
+          <li>
+            <strong>Think Big</strong><br>
+            大きく考える
+          </li>
+        </ul>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- 代表メッセージ -->
   <section class="about-section">
