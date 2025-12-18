@@ -673,3 +673,50 @@ h5 { font-size: 1.05rem; font-weight: 500; }
     gap: 24px;
   }
 }
+
+
+/* ==========================
+   Message Card
+========================== */
+
+.message-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 48px 40px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  margin-top: 40px;
+}
+
+/* リードコピー */
+.message-lead {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+
+/* 本文 */
+.message-body p {
+  margin-bottom: 1.6em;
+  line-height: 1.9;
+}
+
+/* サイン */
+.message-sign {
+  margin-top: 32px;
+  font-weight: 600;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .message-card {
+    padding: 32px 24px;
+  }
+
+  .message-lead {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+}
