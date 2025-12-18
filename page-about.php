@@ -12,153 +12,179 @@ get_header();
     </div>
   </section>
 
-
-  <!-- 会社概要（テーブル） -->
+  <!-- 会社概要 -->
   <section class="about-section">
     <div class="container">
-
       <h2 class="about-section-title">会社概要</h2>
 
       <table class="about-table">
-        <tr><th>会社名</th><td>株式会社Opinio</td></tr>
-        <tr><th>代表者</th><td>代表取締役 柴 久人</td></tr>
-        <tr><th>事業内容</th><td>・エージェント事業<br>・HR Techサービスの開発/販売事業</td></tr>
-        <tr><th>設立</th><td>2023年9月</td></tr>
-        <tr><th>資本金</th><td>500万円</td></tr>
-        <tr><th>有料職業紹介事業免許</th><td>13-ユ-316441</td></tr>
-        <tr><th>保有資格</th><td>キャリアコンサルタント（国家資格）</td></tr>
-        <tr>
-          <th>本社所在地</th>
-          <td>
-            〒107-0052<br>
-            東京都港区赤坂2丁目21番4号<br>
-            天翔赤坂ANNEXビル404-C
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>会社名</th>
+            <td>株式会社Opinio</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役 柴 久人</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              <ul>
+                <li>エージェント事業</li>
+                <li>HR Tech（HRテック）サービスの開発・販売</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>2023年9月</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>500万円</td>
+          </tr>
+          <tr>
+            <th>有料職業紹介事業免許</th>
+            <td>13-ユ-316441</td>
+          </tr>
+          <tr>
+            <th>保有資格</th>
+            <td>
+              キャリアコンサルタント（国家資格）<br>
+              一般社団法人プロティアン・キャリア協会 プロティアン基礎検定
+            </td>
+          </tr>
+          <tr>
+            <th>本社所在地</th>
+            <td>
+              〒107-0052<br>
+              東京都港区赤坂2丁目21番4号<br>
+              天翔赤坂ANNEXビル404-C
+            </td>
+          </tr>
+        </tbody>
       </table>
-
     </div>
   </section>
 
+  <!-- 取引先一覧 -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="about-section-title">取引先一覧（一部）</h2>
 
-<!-- 導入実績 -->
-<section class="about-section">
-  <div class="container">
+      <ul class="about-clients logo-grid">
+        <?php
+        $logo_query = new WP_Query([
+          'post_type'      => 'logo',
+          'posts_per_page' => -1,
+          'orderby'        => 'menu_order',
+          'order'          => 'ASC'
+        ]);
 
-    <h2 class="about-section-title">導入実績（一例）</h2>
+        if ($logo_query->have_posts()) :
+          while ($logo_query->have_posts()) :
+            $logo_query->the_post();
 
-    <ul class="about-clients logo-grid">
-
-      <?php
-      $args = array(
-        'post_type'      => 'logo',
-        'posts_per_page' => -1,
-        'orderby'        => 'menu_order',
-        'order'          => 'ASC'
-      );
-      $logo_query = new WP_Query($args);
-
-      if ($logo_query->have_posts()) :
-        while ($logo_query->have_posts()) :
-          $logo_query->the_post();
-
-          // アイキャッチ（ロゴ画像）
-          $logo_img = get_the_post_thumbnail_url(get_the_ID(), 'medium');
-          $logo_alt = get_the_title();
-      ?>
-
-        <li class="logo-item">
-          <?php if ($logo_img) : ?>
-            <img src="<?php echo esc_url($logo_img); ?>" alt="<?php echo esc_attr($logo_alt); ?>">
-          <?php else : ?>
-            <?php echo esc_html($logo_alt); ?>
-          <?php endif; ?>
-        </li>
-
-      <?php endwhile; endif; wp_reset_postdata(); ?>
-
-    </ul>
-
-  </div>
-</section>
-
-
+            $logo_img = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+            $logo_alt = get_the_title();
+        ?>
+          <li class="logo-item">
+            <?php if ($logo_img) : ?>
+              <img src="<?php echo esc_url($logo_img); ?>" alt="<?php echo esc_attr($logo_alt); ?>">
+            <?php else : ?>
+              <?php echo esc_html($logo_alt); ?>
+            <?php endif; ?>
+          </li>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
+      </ul>
+    </div>
+  </section>
 
   <!-- Culture -->
   <section class="about-section">
     <div class="container">
-
       <h2 class="about-section-title">Opinioのカルチャー</h2>
 
-      <h3 class="about-subtitle">Vision</h3>
+      <h3 class="about-subtitle">VISION</h3>
       <p class="about-text">
-        2035年、世界で最も使われるHRプラットフォームになる。<br>
-        80億人のキャリアを革新し、HRの世界標準を創る。
+        すべての選択肢に、<br>
+        納得のいく<br>
+        ストーリーを。
       </p>
 
-      <h3 class="about-subtitle">Mission</h3>
+      <h3 class="about-subtitle">MISSION</h3>
       <p class="about-text">
-        「想像を、超えていく。」<br>
-        誰もが想像を超えたキャリアの可能性に出会える世界をつくる。
+        AI時代の<br>
+        キャリアインフラになる。
       </p>
 
-      <h3 class="about-subtitle">Value</h3>
+      <h3 class="about-subtitle">VALUE</h3>
       <ul class="about-values">
-        <li>1. See the Invisible ― 見えない可能性を見る</li>
-        <li>2. Love the Chain ― つながりの連鎖を愛する</li>
-        <li>3. Now not Later ― あとでじゃなく、今</li>
-        <li>4. World or Nothing ― 世界か、無か</li>
-        <li>5. Make Mondays Better ― 月曜日を最高にする</li>
+        <li><strong>The Dream Team</strong> ― 最高のチームを作る</li>
+        <li><strong>Truth First</strong> ― 真実を最優先に</li>
+        <li><strong>Think Big</strong> ― 大きく考える</li>
       </ul>
-
     </div>
   </section>
 
-
-  <!-- CEO メッセージ -->
+  <!-- 代表メッセージ -->
   <section class="about-section">
     <div class="container">
-
-      <h2 class="about-section-title">CEOからのメッセージ</h2>
+      <h2 class="about-section-title">代表メッセージ</h2>
 
       <p class="about-text">
-        私たちと共に新たなステージへ挑戦し、輝かしい未来を築きましょう。<br><br>
+        <strong>「真実」が、キャリアを変える。</strong><br><br>
 
-        株式会社OpinioはSaaS業界に特化した転職エージェントとして、皆様のキャリア形成を全力でサポートいたします。<br>
-        SaaS業界は急速に成長し、多くの可能性が広がっています。その中で、適切なキャリアパスを見つけることは非常に重要です。<br><br>
+        はじめまして。Opinio株式会社 代表の柴 久人です。<br><br>
 
-        弊社のコンサルタントは、全員がSaaS企業での実務経験を持ち、深い業界知識と広いネットワークを活かして最適な転職先をご提案いたします。<br><br>
+        私はこれまで10年間、RecruitとSalesforceで営業職として働きながら、
+        多くの「採用のミスマッチ」を目の当たりにしてきました。
+        優秀な人材が、情報不足や表面的なマッチングによって、
+        本来輝けるはずの場所に出会えない——
+        この現実に、課題意識を持ち続けてきました。<br><br>
 
-        求職者にはパーソナライズドなサポートを。<br>
-        企業様には優秀な人材をご紹介し、組織の成長を支援します。<br><br>
+        2023年、私はOpinioを創業しました。
+        社名の由来はラテン語で「意見・見解」を意味する言葉。
+        採用においても、キャリアにおいても、
+        「本当のこと」を伝え合うことでしか、
+        真の成功は生まれないという信念を込めています。<br><br>
 
-        共に未来をつくりましょう。<br><br>
+        <strong>Truth to Careers</strong>——これが私たちの信念・信条です。<br><br>
 
-        柴 久人 / 株式会社Opinio 代表取締役
+        企業には、飾らない現実を。<br>
+        候補者には、正直なフィードバックを。<br>
+        そして双方に、長期的な成功につながる
+        「真実のマッチング」を届けること。<br><br>
+
+        おかげさまで創業以来、早期離職ゼロという結果で、
+        その信念を証明し続けています。<br><br>
+
+        IT・SaaS業界は、日本の未来を担う成長産業です。
+        この領域で「人」と「企業」を正しくつなぐことが、
+        私たちにできる社会への貢献だと考えています。<br><br>
+
+        採用に、キャリアに、真実を。<br><br>
+
+        Opinio株式会社<br>
+        代表取締役 柴 久人
       </p>
-
     </div>
   </section>
-
 
   <!-- CEO プロフィール -->
   <section class="about-section">
     <div class="container">
-
       <h2 class="about-section-title">CEO プロフィール</h2>
 
       <p class="about-text">
-        柴 久人（Hisato Shiba）<br><br>
+        会計コンサルティング会社、リクルート、
+        セールスフォース・ジャパンを経て、
+        2023年にOpinio株式会社を創業。<br><br>
 
-        学生時代はサッカー部。新卒で税務コンサル会社へ入社。<br>
-        2014年に求人広告会社へ。2015年からリクルートキャリアへ出向し人材紹介業に携わる。<br><br>
-
-        2018年、Salesforce Japanへ入社。インサイド／フィールドセールスとしてCRM導入支援に従事。<br>
-        2024年、SaaS業界の知見を元に株式会社Third Boxを創業。<br><br>
-
-        キャリアコンサルタント（国家資格）保有。
+        主にIT・SaaS業界に強みを持つ人材紹介事業を展開。
+        創業以来、ご紹介候補者の退職ゼロを継続中。
       </p>
-
     </div>
   </section>
 

@@ -2,19 +2,42 @@
    Reptio2026 : COMMON STYLE
    すべてのページで読み込む共通CSS
 ===================================================== */
-
 /* ------------------------------
    ROOT COLOR VARIABLES
 ------------------------------ */
 :root {
-  --color-primary: #332c54;
-  --color-secondary: #4e878c;
-  --color-accent: #65b891;
-  --color-bg: #f4f4ed;
+  /* ==========================
+     Brand / Theme Colors
+  ========================== */
 
-  --color-text: #222;
-  --color-border: #ddd;
+  /* メインテーマ（グリーン系） */
+  --color-green-middle: #65B891;      /* ミドルグリーン：メイン・開始色 */
+  --color-green-teal:   #4E878C;      /* ティールグリーン：終了色 */
+  --color-green-light:  #93E5AB;      /* ライトグリーン：ボーダー等 */
+  --color-green-pale:   #B5FFE1;      /* ペールミント：アクセント */
 
+  /* サブカラー */
+  --color-navy-dark: #332C54;         /* ダークネイビー：テキスト・タグ */
+  --color-white:     #FFFFFF;
+
+  /* ==========================
+     Semantic Mapping
+     （既存CSS互換）
+  ========================== */
+
+  /* 既存変数との対応づけ（破壊しない） */
+  --color-primary:   var(--color-navy-dark);
+  --color-secondary: var(--color-green-teal);
+  --color-accent:    var(--color-green-middle);
+
+  /* 背景・テキスト */
+  --color-bg:        #F6FBF9;          /* 白寄りのグリーン背景 */
+  --color-text:      var(--color-navy-dark);
+  --color-border:    var(--color-green-light);
+
+  /* ==========================
+     Layout
+  ========================== */
   --container-width: 1080px;
 }
 
@@ -157,7 +180,7 @@ h5 { font-size: 1.05rem; font-weight: 500; }
 ===================================================== */
 
 .site-footer {
-  background: #222;
+  background: var(--color-navy-dark);
   color: #fff;
   padding: 40px 0 30px;
   margin-top: 60px;
